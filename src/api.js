@@ -32,5 +32,10 @@ export const MoviesApi = {
         params: {
             append_to_response: "videos"
         }
-    }) 
+    }),
+    search: term => api.get("search/tv", {
+        params: {
+            qurey: encodeURIComponent(term)
+        }
+    })
 };
